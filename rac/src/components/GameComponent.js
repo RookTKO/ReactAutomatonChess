@@ -13,7 +13,8 @@ class Game extends Component{
                     height: 64 * 8
                 }}
                 ></div>
-                <div className="tiles"></div>
+                <div className="infoContext"></div>
+                <div className="cards"></div>
             </div>
         )
     }
