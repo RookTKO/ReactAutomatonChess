@@ -1,0 +1,17 @@
+.mainGame {
+    position: relative;
+    display: flex;
+    padding: 10%;
+}
+
+.mainGame .map {
+    background-image: url(/grid.png);
+    background-size: 64px 64px;
+}
+
+.mainGame .tiles {
+    flex: 1;
+    border: 1px solid black;
+    border-left: none;
+    background: green;
+}

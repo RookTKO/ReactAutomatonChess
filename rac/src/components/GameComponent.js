@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
+import "./styles.css"
+
 
 class Game extends Component{
     render(){
         return (
             <div className="mainGame">
+                {/* Make map into own component */}
                 <div className="map"
                 style={{
-                    width: 32 * 8,
-                    height: 32 * 8
+                    width: 64 * 8,
+                    height: 64 * 8
                 }}
                 ></div>
                 <div className="tiles"></div>
