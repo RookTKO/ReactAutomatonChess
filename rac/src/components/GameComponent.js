@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import "./styles.css"
+import Board from './BoardComponent';
+import Deck from './DeckComponent';
 import {DECK} from '../constants/deck';
+import InfoContext from './InfoContextComponent';
+import "./styles.css"
 
 
 class Game extends Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            deck : DECK
+        };
+    };
+
     render(){
         return (
             <div className="mainGame">
-                {/* Make map into own component */}
-                <div className="board"
-                style={{
-                    width: 64 * 8,
-                    height: 64 * 8
-                }}
-                ></div>
-                <div className="infoContext"></div>
-                <div className="cards">
-                    {DECK.map((card) =>(
-                    <div className='cards'>  ID: {card.id} Name: {card.name} Mana Cost: {card.cost} Image Url: {card.image} </div>
-                    ))
-                    }
-                </div>
+                <Board />
+                <InfoContext />
+                <Deck currentDeck={this.state.deck}/>
             </div>
         )
     }
