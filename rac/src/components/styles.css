@@ -1,35 +1,41 @@
 .mainGame {
     position: relative;
-    display: flex;
     padding: 5%;
-    flex-flow: wrap;
-  
-    /* Then we define how is distributed the remaining space */
-    justify-content: space-around;
+    display: flex;  
+    flex-flow: row wrap;
     border: 2px solid red;
 }
 
-.mainGame .map {
+.mainGame .board {
+    
     background-image: url(/grid.png);
     background-size: 64px 64px;
     border: 2px solid red;
-    
 }
 
 .mainGame .infoContext {
-    order: 1;
-    width: calc(64px * 8);
+    /* flex: 1; */
+    width: 50%;
     border: 1px solid black;
     border-left: none;
     background: blue;
-    justify-content: space-around;
 }
 .mainGame .cards{
-    order: 2;
-    width: 100%;
-    align-self: flex-end;
     border: 1px solid black;
     border-left: none;
     background: green;
     height: 100px;
+}
+
+.cards {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
+    height: 32px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.placed .cards{
+    position: absolute;
 }
